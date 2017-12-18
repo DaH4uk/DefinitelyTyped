@@ -167,7 +167,10 @@ export interface TableProps extends
     PadRowComponent: () => React.ReactNode;
 
     /** Server-side callbacks */
-    onFetchData: () => void;
+    onFetchData: (state: any, instance: ReactTable) => void;
+        
+    /** Number of pages */
+	pages: number;
 }
 
 export interface ControlledStateOverrideProps {
